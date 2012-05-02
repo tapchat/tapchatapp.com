@@ -22,6 +22,12 @@
       .disclaimer {
         font-size: 14px;
       }
+      .steps li {
+        margin-bottom: 1em;
+        list-style: decimal outside;
+        margin-left: 23px;
+        padding-left: 0;
+      }
     </style>
   </head>
 
@@ -43,9 +49,12 @@
 
         <h3>Getting Started</h3>
 
-        <ol>
+        <ol class="steps">
           <li>Grab the <a href="https://www.zubhium.com/d/85b3b/">Android app</a>.</li>
-          <li>Set up the <a href="https://github.com/codebutler/tapchat-irssi/blob/master/README.md">Irssi plugin</a> or sign up for <a href="https://irccloud.com">IRCCloud</a>.</li>
+          <li>Install the <a href="https://github.com/codebutler/tapchat-irssi/blob/master/README.md">Irssi plugin</a>:
+          <pre>$ curl -L https://goo.gl/ddgWk | bash</pre>
+          </li>
+          <li>...or sign up for <a href="https://irccloud.com">IRCCloud</a>.</li>
         </ol>
 
         <h3>Known Issues</h3>
