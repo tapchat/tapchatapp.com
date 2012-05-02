@@ -9,6 +9,20 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>TapChat</title>
+    <style type="text/css">
+      .issues {
+        font-size: 16px;
+      }
+      .questions span {
+        color: #000;
+      }
+      .copyright {
+        margin-bottom: 0;
+      }
+      .disclaimer {
+        font-size: 14px;
+      }
+    </style>
   </head>
 
   <body>
@@ -16,7 +30,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-        <h1 id="project_title">TapChat <span>BETA</span></h1>
+          <h1 id="project_title">TapChat <span>BETA</span></h1>
           <h2 id="project_tagline">Finally: Mobile IRC done right.</h2>
         </header>
     </div>
@@ -24,7 +38,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Thanks for your interest in TapChat!</h3>
+        <h3>Thanks for interest in TapChat!</h3>
         <p>Stay connected with your favorite channels in the cloud instead of draining your phone's battery. Scroll back any time to catch up on what you've missed, and receive push notifications when someone mentions or messages you.</p>
 
         <h3>Getting Started</h3>
@@ -34,16 +48,29 @@
           <li>Set up the <a href="https://github.com/codebutler/tapchat-irssi/blob/master/README.md">Irssi plugin</a> or sign up for <a href="https://irccloud.com">IRCCloud</a>.</li>
         </ol>
 
-<h3>Questions?</h3>
+        <h3>Known Issues</h3>
+        <ul class="issues">
+          <li>
+            Android app
+            <ul>
+              <li>No app icon or design - please excuse the mess.</li>
+              <li>SSL certificates are not verified, so a secure connection cannot be guarenteed.</li>
+              <li>TapChat may not disconnect if the screen is turned off while the app is visible. Return home before sleeping your device.</li>
+            </ul>
+          </li>
+        </ul>
 
-<p>Join #tapchat on irc.seattlewireless.net.</p>
+        <h3>Questions?</h3>
+
+        <p class="questions">Please join <span>#tapchat</span> on <span>irc.seattlewireless.net</span>.</p>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">TapChat was created by <a href="http://codebutler.com">codebutler</a>.</p>
+        <p class="copyright">TapChat created by <a href="http://codebutler.com">codebutler</a> in Seattle, WA.</p>
+        <p class="disclaimer">Not affiliated with IRCCloud.</p>
       </footer>
     </div>
 
