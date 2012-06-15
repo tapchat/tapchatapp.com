@@ -7,13 +7,13 @@
     
     <!--
     <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" />
-    <script type="text/javascript" src="js/lib/bootstrap-modal.js"></script>
     <script type="text/javascript" src="js/lib/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="js/lib/bootstrap-button.js"></script>
     -->
     <script type="text/javascript" src="javascripts/jquery-1.7.1.js"></script>
     <script type="text/javascript" src="javascripts/bootstrap-transition.js"></script>
     <script type="text/javascript" src="javascripts/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap-modal.js"></script>
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -29,7 +29,7 @@
         font-weight: normal;
         vertical-align: super;
       }
-      h3 {
+      .container h3 {
         padding-left: 25px;
         padding-bottom: 0.5em;
       }
@@ -38,6 +38,12 @@
       }
       .steps li {
         margin-bottom: 1.5em;
+      }
+      .steps pre p {
+        margin: 0;
+        padding: 0;
+        margin-top: 4px;
+        float: right;
       }
       .text {
         padding-left: 25px;
@@ -113,15 +119,18 @@
           <ol class='steps'>
             <li>
               <p>Install the TapChat bouncer to an internet accessible always-on server:</p>
-              <pre>$ npm install tapchat -g
+              <pre><p><a href="#instructionsModal" data-toggle="modal" class="btn btn-info">Detailed instructions</a></p>$ npm install tapchat -g
 $ tapchat start</pre>
               <p>...or sign up with <a href="https://irccloud.com">IRCCloud</a>.</p>
             </li>
             <li>
               <p>Get the Android app.</p>
-              <p><a href="http://zubhi.co/d/94d6c/">
+              <a href="http://zubhi.co/d/eb847/" class="btn btn-large btn-primary">Android beta signup</a>
+              <!--
+              <p><a href="http://zubhi.co/d/6df4c/">
               <img alt="Get it on Google Play" src="http://www.android.com/images/brand/get_it_on_play_logo_large.png" />
               </a></p>
+              -->
             </li>
           </ol>
           <h3>Questions?</h3>
@@ -147,6 +156,30 @@ $ tapchat start</pre>
         <p class="credits">TapChat created by <a href="https://twitter.com/codebutler">codebutler</a> in Seattle, WA.</p>  
         <p class="disclaimer">Not affiliated with IRCCloud.</p>
       </footer>
+    </div>
+    <div class="modal hide" id="instructionsModal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Installing TapChat</h3>
+      </div>
+      <div class="modal-body">
+        <p class="alert alert-info"><strong>Note:</strong> TapChat is designed to be installed to an always-on internet-accessible server, so don't follow these directions on your laptop!</p>
+        <ol>
+          <li>
+          <p>You need the latest version of <a href="http://nodejs.org/">nodejs</a> and npm.</p>
+          <pre>$ sudo apt-add-repository ppa:chris-lea/node.js
+$ sudo apt-get update
+$ sudo apt-get install nodejs npm</pre>
+          </li>
+          <li>
+            <p>Install TapChat</p>
+            <pre>$ sudo npm install tapchat -g</pre>
+          </li>
+          <li>
+            <p>Start and configure TapChat</p>
+            <pre>$ tapchat start</pre>
+        </ol>
+      </div>
     </div>
   </body>
 </html>
