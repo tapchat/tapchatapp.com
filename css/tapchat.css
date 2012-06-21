@@ -1,0 +1,68 @@
+body {
+  padding-top: 20px;
+  background: #E9E9E9;
+}
+.hero-unit {
+  background: #E9E9E9;
+  padding: 25px 0 0 25px;
+  margin-bottom: 25px;
+}
+h1 span {
+  font-size: 16px;
+  font-weight: normal;
+  vertical-align: super;
+}
+.container h3 {
+  padding-left: 25px;
+  padding-bottom: 0.5em;
+}
+.steps li, .steps li p {
+  font-size: 14px;
+}
+.steps li {
+  margin-bottom: 1.5em;
+}
+.steps pre p {
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+  float: right;
+}
+.text {
+  padding-left: 25px;
+}
+.text p {
+  font-size: 14px;
+}
+.screenshots-frame {
+  background: url('../img/frame.png') no-repeat;
+  width: 399px;
+  height: 595px;
+  margin: 0 auto;
+}
+.carousel-control {
+  display: none;
+}
+.screenshots:hover .carousel-control {
+  display: block;
+}
+.screenshots {
+  position: relative;
+  top: 93px;
+  left: 75px;
+  width: 250px;
+}
+.questions span {
+  color: #000;
+}
+footer {
+  padding: 1.5em 0;
+  line-height: 0.75em;
+  color: #555;
+}
+.credits {
+  font-size: 14px;
+}
+.disclaimer {
+  font-size: 10px;
+}
