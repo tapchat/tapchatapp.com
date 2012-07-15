@@ -7,6 +7,9 @@ body {
   padding: 25px 0 0 25px;
   margin-bottom: 25px;
 }
+.hero-unit sup {
+  font-size: 10px;
+}
 .tagline {
   padding-top: 0.5em;
 }
