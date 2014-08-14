@@ -66,6 +66,24 @@ footer {
 }
 
 .carousel-screenshots img {
-    width:100%;
-    height:auto;
+  width:100%;
+  height:auto;
+}
+
+.github-ribbon {
+    display: none;
+}
+
+.github-ribbon img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+    z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .github-ribbon {
+    display: block;
   }
+}
