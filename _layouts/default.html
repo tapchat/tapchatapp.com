@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %} {{ page.title }} - {% endif %}TapChat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/tapchat.css">
+  </head>
+  <body>
+    <header class="navbar navbar-inverse navbar-fixed-top" id="top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          {% if page.section != 'home' %}
+            <a class="navbar-brand" href="/">TapChat</a>
+          {% endif %}
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            {% for link in site.navigation %}
+              {% assign current = nil %}
+              {% if page.section == link.section %}
+                {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}">
+                <a href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container container-main">
+      {{content}}
+    </div>
+    <div class="container container-footer">
+      <div class="row">
+        <div class="col-sm-12">
+          <footer>
+            <p>by <a href="https://twitter.com/codebutler">@codebutler</a></p>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+---
+layout: default
+section: install
+title: Install
+---
+
+<div class="row">
+  <div class="col-sm-12">
+    <h2 style="margin-left: 20px">Installing TapChat</h2>
+    <div class="alert alert-info" style="margin: 20px"><strong>Note:</strong> TapChat is designed to be installed to an always-on
+      internet-accessible server, so don't follow these directions on your laptop!</div>
+
+    <ol>
+      <li>
+      <p>Install dependencies</p>
+      <pre>$ curl -sL https://deb.nodesource.com/setup | sudo bash -
+$ sudo apt-get update
+$ sudo apt-get install nodejs npm libsqlite3-dev build-essential</pre>
+      </li>
+      <li>
+        <p>Install TapChat</p>
+        <pre>$ sudo npm install tapchat -g</pre>
+      </li>
+      <li>
+        <p>Start and configure TapChat</p>
+        <pre>$ tapchat start
+
+<span style="color: #555">Welcome to TapChat!
+Choose a port [8067]: <strong><em>8067</em></strong>
+Choose a username: <strong><em>AzureDiamond</em></strong>
+Choose a password: <strong><em>hunter2</em></strong>
+
+Generating SSL certificate (this may take a minute)...
+Your SSL fingerprint is: 3C:87:62:4A:47:2C:5B:2B:AB:4A:4B:ED:23:F3:31:68:2B:2C:FF:4C</em></span>
+</pre>
+      </li>
+      <li><p>Access the web interface by visiting <code>https://your_ip_address:8067</code>. Note that only secure
+        HTTPS is supported. Select the option to save the automatically-generated certificate into your browser
+        after verifying the fingerprint matches.</p></li>
+        <li><p>Download and connect the Android app!</p>
+        <p><a href="https://play.google.com/store/apps/details?id=com.tapchatapp.android"><img alt="Get it on Google Play" src="/img/get_it_on_play_logo_large.png" /></a></p></li>
+    </ol>
+  </div>
+</div>
